@@ -18,13 +18,14 @@ public class MainClass {
             }
         }
 
-        Cat cat1 = new Cat(200,2,0);
-        Cat cat2 = new Cat(150,3,0);
-        cat1.run(150);
-        cat1.jump(2);
-        cat1.sail(15);
-        cat2.run(300);
-        cat2.jump(4);
-        cat2.sail(15);
+        Cat cat = new Cat(200,2,0);
+        Dog dog = new Dog(150,3,20);
+
+        cat.run(150);
+        cat.jump(2);
+        cat.sail(15);
+        dog.run(300);
+        dog.jump(4);
+        dog.sail(15);
     }
 }
