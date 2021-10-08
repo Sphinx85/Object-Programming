@@ -40,5 +40,6 @@ public class Personel {
         System.out.println("Номер телефона: " + getPhoneNumber());
         System.out.println("Уровень зарплаты: " + getSalary());
         System.out.println("Возраст: " + getAge());
+        System.out.println("______________________________________________");
     }
 }
