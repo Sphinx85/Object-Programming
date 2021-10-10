@@ -2,9 +2,13 @@ package HomeWork;
 
 public class Cat extends Animal implements MovingAnimals{
 
+    int appetite;
+    boolean satiety;
+
 
     public Cat(int runDistance, int jumpDistance, int sailDistance) {
         super(runDistance, jumpDistance, sailDistance);
+
     }
 
     @Override
