@@ -11,7 +11,7 @@ public class MainClass {
 
         plate.fillingWithFood();
         plate.setAmountOfFood(cat1.catEat(cat1.appetite, plate.getAmountOfFood()));
-        plate.setAmountOfFood(cat2.catEat(cat2.appetite, plate.getAmountOfFood()));
-        plate.setAmountOfFood(cat3.catEat(cat3.appetite, plate.getAmountOfFood()));
+        plate.setAmountOfFood(cat2.catEat(cat2.appetite, plate1.getAmountOfFood()));
+        plate.setAmountOfFood(cat3.catEat(cat3.appetite, plate2.getAmountOfFood()));
     }
 }
