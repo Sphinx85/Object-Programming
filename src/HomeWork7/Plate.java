@@ -4,17 +4,24 @@ public class Plate {
     int volume;
     int amountOfFood;
 
-    public Plate(int volume, int amountOfFood) {
+    public Plate(int volume) {
         this.volume = volume;
-        this.amountOfFood = amountOfFood;
+        this.amountOfFood = fillingWithFood();
     }
 
-    protected int giveRestOfFood(){
+    public void setAmountOfFood(int amountOfFood) {
+        this.amountOfFood = amountOfFood;
+        System.out.println("В миске осталось " + amountOfFood + " еды.");
+    }
+
+    public int getAmountOfFood() {
         return amountOfFood;
     }
 
-    private void fillingWithFood(){
+    public int fillingWithFood(){
         amountOfFood = volume;
+        System.out.println("Миска наполнена");
+        return amountOfFood;
     }
 
 }

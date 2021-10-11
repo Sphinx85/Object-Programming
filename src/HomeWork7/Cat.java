@@ -13,7 +13,13 @@ public class Cat extends Animal implements CatEating{
     }
 
     @Override
-    public boolean catEat(int appetite, int amountOfFood) {
-        return appetite <= amountOfFood;
+    public int catEat(int appetite, int satiety) {
+        if (appetite <= satiety){
+            System.out.println("Кот поел");
+            return satiety - appetite;
+        } else {
+            System.out.println("Коту не хватило пищи");
+            return satiety;
+        }
     }
 }
