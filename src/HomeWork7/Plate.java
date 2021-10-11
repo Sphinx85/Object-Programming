@@ -20,7 +20,7 @@ public class Plate {
 
     public int fillingWithFood(){
         amountOfFood = volume;
-        System.out.println("Миска наполнена");
+        System.out.println("Миска наполнена, объем еды " + volume);
         return amountOfFood;
     }
 
