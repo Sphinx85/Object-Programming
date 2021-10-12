@@ -18,7 +18,7 @@ public class Cat extends Animal implements CatEating{
             System.out.println("Кот поел, его аппетит " + appetite);
             return satiety - appetite;
         } else {
-            System.out.println("Коту не хватило пищи");
+            System.out.println("Коту не хватило пищи. Хочет скушать " + appetite);
             return satiety;
         }
     }
