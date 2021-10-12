@@ -28,11 +28,21 @@ public class MainClass {
         }
 
         for (Cat cat : catArray) {
-            if (cat.appetite> plate.getAmountOfFood()){
+            if (cat.appetite > plate.getAmountOfFood()){
                 plate.fillingWithFood();
             }
             plate.setAmountOfFood(cat.catEat(cat.appetite,plate.getAmountOfFood()));
         }
+
+        System.out.println("_______________________________________________________________");
+
+        Cat [] catArray2 = new Cat[9];
+        for (int i = 0; i < catArray2.length; i++) {
+            catArray[i] = new Cat(i,i,i, random.nextInt(50+i),false);
+        }
+
+
+
 
     }
 }
