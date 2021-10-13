@@ -34,6 +34,6 @@ public class Cat extends Animal implements CatEating{
     @Override
     public int catEat(int appetite, int satiety) {
         timeBefore = System.currentTimeMillis();
-
+        return 0;
     }
 }
