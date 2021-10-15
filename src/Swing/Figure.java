@@ -18,11 +18,11 @@ public class Figure extends JComponent {
         g.setColor(color);
         switch (type){
             case 0:
-                g.fillOval(0,0,200,200);
+                g.fillOval(0,0,90,90);
                 break;
 
             case 1:
-                g.fillRect(0,0,300,300);
+                g.fillRect(0,0,100,200);
                 break;
         }
     }

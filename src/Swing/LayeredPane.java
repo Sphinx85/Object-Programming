@@ -12,7 +12,7 @@ public class LayeredPane extends JFrame {
         Figure figure2 = new Figure(Color.yellow, 0);
         Figure figure3 = new Figure(Color.black,1);
 
-        figure1.setBounds(70,80,50,50);
+        figure1.setBounds(70,80,90,90);
         figure2.setBounds(170,310,100,300);
         figure3.setBounds(300,300,400,200);
 
