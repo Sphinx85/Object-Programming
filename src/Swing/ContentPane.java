@@ -1,7 +1,7 @@
 package Swing;
 
 import javax.swing.*;
-import java.awt.*;
+
 
 public class ContentPane extends JFrame {
     public ContentPane() {
@@ -10,17 +10,20 @@ public class ContentPane extends JFrame {
 
 
         JPanel content = new JPanel();
-        content.add(new Button("First"));
-        content.add(new Button("Second"));
+        content.add(new JButton("First"));
+        content.add(new JButton("Second"));
 
         setContentPane(content);
 
+        setSize(400,200);
 
-        setPreferredSize(new Dimension(100,200));
+
+        //setPreferredSize(new Dimension(400,200));
         setVisible(true);
     }
 
     public static void main(String[] args) {
+        JFrame.setDefaultLookAndFeelDecorated(true);
         new ContentPane();
     }
 }
