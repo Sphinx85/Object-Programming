@@ -44,11 +44,16 @@ public class RunCalculator {
         frame.setContentPane(content);
         frame.setSize(250,200);
         frame.setLocationByPlatform(true);
+        //frame.pack();
         frame.setVisible(true);
+    }
+    void setTextToTextfield(Object textfield, Object button){
+
     }
     //Функции кнопок
     public static void addAction(JButton button){
-        button.addActionListener(e -> System.out.println("Test" + button.getText()));
+
+        //button.addActionListener(e -> System.out.println("Test" + button.getText()));
     }
     //Функция кнопки результата
     public static void resultAction(JButton button){
