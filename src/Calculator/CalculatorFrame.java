@@ -14,31 +14,31 @@ public class CalculatorFrame extends JFrame {
     public CalculatorFrame(){
         //Создаем окно и основную рабочую панель
         JFrame calcFrame = new JFrame("Sphinx Calculator");
-        setDefaultLookAndFeelDecorated(false);
-        setPreferredSize(new Dimension(640,480));
+        //setDefaultLookAndFeelDecorated(false);
+        //setPreferredSize(new Dimension(640,480));
+        //setSize(640,480);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container mainFrame = calcFrame.getContentPane();
 
         //Создаем дисплей калькулятора
         JTextField calculatorDisplay = new JTextField(20);
         calculatorDisplay.setHorizontalAlignment(SwingConstants.RIGHT);
-        calcFrame.add(calculatorDisplay);
+        mainFrame.add(calculatorDisplay, "North");
 
         //Создаем клавиатуру калькулятора
         JPanel keyboard = new JPanel();
         GridLayout grid = new GridLayout(4,4,5,5);
         keyboard.setLayout(grid);
         //Добавляем кнопки на панель
-        for (int i = 0; i < keys.length; i++){
-            JButton button = new JButton(keys[i]);
+        for (String key : keys) {
+            JButton button = new JButton(key);
             keyboard.add(button);
-            selectFunction(button, calculatorDisplay,checkSymbol(keys[i]),keys[i]);
+            selectFunction(button, calculatorDisplay, checkSymbol(key), key);
         }
 
         calcFrame.getContentPane().add(keyboard);
-        pack();
-        setVisible(true);
-
+        calcFrame.pack();
+        calcFrame.setVisible(true);
     }
 
     private Integer checkSymbol(String key) {
