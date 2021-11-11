@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
     String [] keys = {"7","8","9","/","4","5","6","*","1","2","3","-","0","^","=","+"};
-    Integer temp1;
-    Integer temp2;
+    Integer variableOne;
+    Integer variableTwo;
     String action;
-    StringBuilder temp = new StringBuilder();
+    StringBuilder stringBuilder = new StringBuilder();
     StringBuilder field = new StringBuilder();
-    int leng;
+    int builderStringLength;
 
     public MainFrame(){
         JFrame mainFrame = new JFrame("Calculator");
@@ -52,50 +52,29 @@ public class MainFrame extends JFrame {
                 break;
 
             case 1:
-                button.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        if(temp1 != null){
-                            return;
-//                            temp.delete(0,leng);
-//                            temp.append(display.getText());
-//                            temp2 = Integer.valueOf(temp.substring(leng + 1));
-//                            leng = temp.length();
-//                            display.setText(Integer.toString(calculate(temp1,temp2,action)));
-////                            temp1 = null;
-//                            temp2 = null;
-//                            action = null;
-//                            temp.delete(0,leng);
-//                            leng = 0;
-//                            display.setText(display.getText() + keys[symbol]);
-//                            action = keys[symbol];
-                        } else {
-                            temp.append(display.getText());
-                            leng = temp.length();
-                            temp1 = Integer.valueOf(display.getText());
-                            display.setText(display.getText() + keys[symbol]);
-                            action = keys[symbol];
+                button.addActionListener(e -> {
+
+                        stringBuilder.append(display.getText());
+                        builderStringLength = stringBuilder.length();
+                        variableOne = Integer.valueOf(display.getText());
+                        display.setText(display.getText() + keys[symbol]);
+                        action = keys[symbol];
 //                        display.setText("");
-                        }
-                    }
-                });
+                    });
                 break;
 
             case 2:
-                button.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        temp.delete(0,leng);
-                        temp.append(display.getText());
-                        temp2 = Integer.valueOf(temp.substring(leng + 1));
-                        leng = temp.length();
-                        display.setText(Integer.toString(calculate(temp1,temp2,action)));
-                        temp1 = null;
-                        temp2 = null;
-                        action = null;
-                        temp.delete(0,leng);
-                        leng = 0;
-                    }
+                button.addActionListener(e -> {
+                    stringBuilder.delete(0, builderStringLength);
+                    stringBuilder.append(display.getText());
+                    variableTwo = Integer.valueOf(stringBuilder.substring(builderStringLength + 1));
+                    builderStringLength = stringBuilder.length();
+                    display.setText(Integer.toString(calculate(variableOne, variableTwo,action)));
+                    variableOne = null;
+                    variableTwo = null;
+                    action = null;
+                    stringBuilder.delete(0, builderStringLength);
+                    builderStringLength = 0;
                 });
         }
     }
