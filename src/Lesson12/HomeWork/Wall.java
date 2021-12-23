@@ -3,10 +3,6 @@ package Lesson12.HomeWork;
 public class Wall extends Obstacles{
     private final int height;
 
-    public int getHeight() {
-        return height;
-    }
-
     public Wall(int height) {
         this.height = height;
     }
@@ -25,20 +21,5 @@ public class Wall extends Obstacles{
                 System.out.println(player + " " + o.getPlayerID() + " покинул соревнования");
             } else System.out.println(player + " " + o.getPlayerID() + " перепрыгнул");
         }
-
-
-
-
-        /*if (o.isPlayed()) {
-            System.out.println(this.height > distance ?
-                    player + " " + o.getPlayerID() + " не может перепрыгнуть" :
-                    player + " " + o.getPlayerID() + " перепрыгнул");
-        }
-        if (this.height > distance){
-            o.setPlayed(false);
-            System.out.println(player + " " + o.getPlayerID() + " покинул соревнования");
-        }*/
     }
-
-
 }

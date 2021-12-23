@@ -14,9 +14,11 @@ public class RunRace {
             obstacles[i] = new Wall((int)(Math.random()*7));
             obstacles[i+1] = new Treadmill((int)(Math.random()*1000));
         }
+
         /** Два варианта прохождения препятствий. Нужно поменять условия циклов и содержимое вложенного цикла фор
          * на закомментированное ниже
          */
+
         for (int  i=0; i < obstacles.length; i++){   // Здесь пишем players.length чтобы всю полосу препятствий проходили по очереди
             for (int j = 0; j < players.length; j++){   // Здесь пишем obstacles.length чтобы всю полосу препятствий проходили по очереди
 

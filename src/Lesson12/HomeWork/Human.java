@@ -18,8 +18,6 @@ public class Human extends Players{
         return playerID;
     }
 
-
-
     public int getJumpLimit() {
         return jumpLimit;
     }
@@ -32,7 +30,6 @@ public class Human extends Players{
         this.jumpLimit = jumpLimit;
         this.runLimit = runLimit;
         this.playerID = playerID;
-
     }
 
     @Override
