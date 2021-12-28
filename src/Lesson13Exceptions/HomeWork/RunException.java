@@ -20,7 +20,7 @@ public class RunException {
                     array[i][j] = "14";
                 }
             }
-            array[2][1] = "+";
+            array[2][1] = "A";
             System.out.println("Массив задан верно");
 
             int arraySumm = 0;
@@ -28,9 +28,12 @@ public class RunException {
             for (int i = 0; i<array.length; i++){
                 for (int j = 0; j< array.length; j++){
                     try {
+                        if (array[i][j].contains("A")){
+                            throw new MyArrayDataException("Не верный формат данных");
+                        }
                         intArray[i][j] = Integer.parseInt(array[i][j]);
                         arraySumm = arraySumm + intArray[i][j];
-                    } catch (NumberFormatException e){
+                    } catch (MyArrayDataException e){
                         System.out.println("Не верный аргумент для преобразования в ячейке " + i + " " + j);
                     }
                 }
