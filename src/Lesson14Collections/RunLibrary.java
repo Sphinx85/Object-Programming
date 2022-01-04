@@ -2,14 +2,24 @@ package Lesson14Collections;
 
 public class RunLibrary {
     public static void main(String[] args) {
+        /**
+         * Создаем базу данных
+         */
         DataBase dataBase = new DataBase();
-        dataBase.add("Иванов", 5555555);
-        dataBase.add("Петров", 5556985);
-        dataBase.add("Весечкин", 5535155);
-        dataBase.add("Иванов", 5515855);
-        dataBase.add("Петров", 5582755);
-        System.out.println("Иванов тел.: " + dataBase.get("Иванов"));
-        System.out.println("Петров тел.: " + dataBase.get("Петров"));
-        System.out.println(dataBase.get("Иванов"));
+        /**
+         * Закидываем в базу пользователей
+         */
+        dataBase.add("Иванов",5555555);
+        dataBase.add("Петров",5556985);
+        dataBase.add("Васечкин",5535155);
+        dataBase.add("Иванов",5515855);
+        dataBase.add("Петров",5582755);
+        dataBase.add("Иванов", 9995588);
+        /**
+         * Получаем данные из базы
+         */
+        dataBase.get("Иванов");
+        dataBase.get("Петров");
+        dataBase.get("Уварова"); //Проверка отсутствующей записи в базе
     }
 }
